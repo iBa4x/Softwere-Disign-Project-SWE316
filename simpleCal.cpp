@@ -90,7 +90,10 @@ void Cal(){
     long long num1, num2, op;
     string s;
 
-    cout << " -First select an opreation:" << endl;
+    cout << " -First enter number 1 & number 2: ";
+    cin >> num1 >> num2;
+
+    cout << " -Second select an opreation:" << endl;
     cout << "  1 : +    (addion)" << endl;
     cout << "  2 : -    (subtrction)" << endl;
     cout << "  3 : ×    (multply)" << endl;
@@ -100,28 +103,21 @@ void Cal(){
     cout << "\nEnter your choice: ";
 
     cin >> op;
-    cin >> num1 >> num2;
 
     if(op == 1){
-        cout << " -Second enter number 1 & number 2: ";
         cout << "  "<<num1 << " + " << num2 << " = " << sum(num1, num2);
     }else if(op == 2){
-        cout << " -Second enter number 1 & number 2: ";
         cout << "  "<< num1 << " - " << num2 << " = " << num1-num2 << endl;
     }else if(op == 3){
-        cout << " -Second enter number 1 & number 2: ";
         cout << "  "<<num1 << " × " << num2 << " = " << mul(num1, num2);
     }else if(op == 4){
-        cout << " -Second enter number 1 & number 2: ";
         cout << "  "<<num1 << " ÷ " << num2 << " = " << (long double)num1/num2 << endl;
     }else if(op == 5){
-        cout << " -Second enter number 1 & number 2: ";
         cout << "  "<<num1 << " % " << num2 << " = " << num1%num2 << endl;
     }else if(op == 6){ 
-        cout << " -Second enter number 1 & number 2: ";
         long long res = power(num1, num2);
         cout << "  "<<num1 << " ^ " << num2 << " = ";
-        if(res>>63){
+        if(res>>63 && num2 > 1){
             cout << "error" << endl;
         }else{
             cout << res << endl;
