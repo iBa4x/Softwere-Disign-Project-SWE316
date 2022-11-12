@@ -2,7 +2,7 @@
 using namespace std;
 
 /**
- * @brief this function do n1+n2
+ * @brief this function do num1+num2
  * 
  * @param num1 number 1
  * @param num2 number 2
@@ -14,10 +14,10 @@ long long sum(long long num1, long long num2){ // O(1)
 }
 
 /**
- * @brief this function do n1-n2
+ * @brief this function do num1-num2
  * 
- * @param num1 
- * @param num2 
+ * @param num1 number 1
+ * @param num2 number 2
  * @return long long 
  */
 long long sub(long long num1, long long num2){ // O(1)
@@ -90,9 +90,11 @@ void Cal(){
     long long num1, num2, op;
     string s;
 
+    // ask the user for number 1 & number 2.
     cout << " -First enter number 1 & number 2: ";
     cin >> num1 >> num2;
 
+    // ask the user for the opreation he/she want to preform on the number 1 & number 2
     cout << " -Second select an opreation:" << endl;
     cout << "  1 : +    (addion)" << endl;
     cout << "  2 : -    (subtrction)" << endl;
