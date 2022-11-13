@@ -70,7 +70,7 @@ long long mod(long long num1, long long num2){ // O(1)
  * @param num2 number 2
  * @return long long 
  */
-long long power(long long num1, long long num2){ // O(logn2)
+long long power(long long num1, long long num2){ // O(lognum2)
     long long res = 1;
     while (num2 > 0) { 
         if (num2 & 1) // if odd
