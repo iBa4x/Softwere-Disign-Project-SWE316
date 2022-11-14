@@ -70,7 +70,7 @@ long long mod(long long num1, long long num2){ // O(1)
  * @param num2 number 2
  * @return long long 
  */
-long long power(long long num1, long long num2){ // O(lognum2)
+long long power(long long num1, long long num2){ // O(logn2)
     long long res = 1;
     while (num2 > 0) { 
         if (num2 & 1) // if odd
@@ -98,14 +98,19 @@ void operation(long long op, long long num1, long long num2){
     }else if(op == 3){
         cout << "  "<<num1 << " × " << num2 << " = " << mul(num1, num2) << endl;
     }else if(op == 4){
-        cout << "  "<<num1 << " ÷ " << num2 << " = " << divi(num1, num2) << endl;
+        if(num2 != 0){
+            cout << "  "<<num1 << " ÷ " << num2 << " = " << divi(num1, num2) << endl;
+        }else{
+            cout << "[Error]: divid by 0" << endl;
+        }
+        
     }else if(op == 5){
         cout << "  "<<num1 << " % " << num2 << " = " << mod(num1, num2) << endl;
     }else if(op == 6){ 
         long long res = power(num1, num2);
         cout << "  "<<num1 << " ^ " << num2 << " = ";
         if(res>>63 && num2 > 1){
-            cout << "error" << endl;
+            cout << "[Error]: the output is too big for compliler to handle" << endl;
         }else{
             cout << res << endl;
         }
